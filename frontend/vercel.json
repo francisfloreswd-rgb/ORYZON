@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/backend/:path*", "destination": "https://oryzon-wyyo.onrender.com/:path*" },
+    { "source": "/sim/:path*", "destination": "https://oryzon-real.onrender.com/:path*" }
+  ]
+}
