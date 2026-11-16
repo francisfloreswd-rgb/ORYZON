@@ -380,8 +380,10 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",            # local Vite dev
-        "https://oryzon-pied.vercel.app",   # your deployed frontend, if you still use it
+        "https://oryzon-pied.vercel.app",
+        "https://oryzon-mocha.vercel.app",  # your live site
     ],
+    allow_origin_regex=r"https://oryzon.*\.vercel\.app",  # also covers Vercel preview URLs
     allow_methods=["*"],
     allow_headers=["*"],
 )
